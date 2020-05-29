@@ -1,7 +1,7 @@
 <?php
 
 header('Content-Type: text/html; charset=utf-8');
-header ("Cache-Control: no-cache, must-revalidate ");
+header ("Cache-Negocio: no-cache, must-revalidate ");
 date_default_timezone_set('America/Argentina/La_Rioja');
 
 
@@ -23,7 +23,7 @@ include_once('util/funciones.php');
 
 
 // Variable que define la pagina de autenticacion del proyecto
-//$INICIO = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/vista/login/login.php";
+//$INICIO = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/Presentacion/login/login.php";
 
 // variable que define la pagina principal del proyecto (menu principal)
 //$PRINCIPAL = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/principal.php";

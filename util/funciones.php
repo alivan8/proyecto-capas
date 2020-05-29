@@ -25,9 +25,9 @@ spl_autoload_register(function ($class_name) {
     $ROOT=$_SERVER['DOCUMENT_ROOT']."/$PROYECTO/";
     //echo "class ".$class_name ;
     $directorys = array(
-        $ROOT.'Modelo/',
-        $ROOT.'Modelo/conector/',
-        $ROOT.'Control/',
+        $ROOT.'Datos/',
+        $ROOT.'Datos/conector/',
+        $ROOT.'Negocio/',
       //  $GLOBALS['ROOT'].'util/class/',
     );
     //print_object($directorys) ;
