@@ -30,13 +30,43 @@ include_once '../estructura/encabezado.php';
 <!--CONTENIDO CENTRAL DE LA PAGINA PRINCIPAL-->
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
 
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">Lo mejor en Tecnologia</h1>
-        <p class="lead font-weight-normal">Los mejores precios de la patagonia</p>
+    <div class="col-md-5 m-0">
+        <h1 class="display-4 font-weight-normal">CONFERENCIAS Y EVENTOS FICCT</h1>
+        <p class="lead font-weight-normal">la inscripcion a tu conferencia  al alcanze de un clik, incribete ya!!!</p>
+
     </div>
 
-  <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+
+    <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/UAGRM.jpg" alt="" width="1500" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="images/UAGRM.jpg" alt="" width="1500" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="images/UAGRM.jpg" alt="" width="1500" height="500">
+            </div>
+        </div>
+
+        <!--Controles NEXT y PREV-->
+        <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--Controles de indicadores-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel1" data-slide-to="1"></li>
+            <li data-target="#carousel1" data-slide-to="2"></li>
+        </ol>
+
+    </div>
 </div>
 
 <!--SE DIUJAN TODOS LOS eventoS-->
