@@ -26,7 +26,7 @@ include_once('util/funciones.php');
 //$INICIO = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/Presentacion/login/login.php";
 
 // variable que define la pagina principal del proyecto (menu principal)
-//$PRINCIPAL = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/principal.php";
+//$PRINCIPAL = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/inicio.php";
 
 
 //$_SESSION['ROOT']=$ROOT;

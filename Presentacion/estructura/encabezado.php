@@ -25,7 +25,7 @@ if(!$session->activa()){
 
     $variableMenuUsuario='entrar';
 
-    if($archivo != 'principal.php'){
+    if($archivo != 'inicio.php'){
         header('Location: ../principal/login.php');
     }
 
@@ -56,7 +56,7 @@ function puedoEntrar($rolUsu,$listaMenuRol,$archivo,$arregloMenu){
     $encontrado = false;
     $salir = false;
 
-    if ($archivo == 'principal.php') {
+    if ($archivo == 'inicio.php') {
         $salir = true;
         $encontrado = true;
     }

@@ -54,7 +54,7 @@ $session=new Session();
             </form>
 
     <hr class="mb-4">
-    <a class="btn btn-primary btn-lg btn-block" href="principal.php">No hacer cambios y volver</a>
+    <a class="btn btn-primary btn-lg btn-block" href="inicio.php">No hacer cambios y volver</a>
 </div>
     <script type="application/javascript">
         var password, password2;

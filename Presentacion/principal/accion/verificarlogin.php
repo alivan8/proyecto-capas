@@ -11,7 +11,7 @@ $usuario=$claseSession->iniciar($datos['usnombre'],$datos['uspass']);
 
 if($claseSession->validar() and $claseSession->getUsuario()->getUsdeshabilitado() == null) {
 
-    header("Location:../principal.php");
+    header("Location:../inicio.php");
 
     } else {
     session_destroy();

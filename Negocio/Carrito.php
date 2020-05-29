@@ -208,7 +208,7 @@ class Carrito{
             $this->actualizarEntrada($evento,$cantidadPedida,'restar');
             $objAbmInscripcionitem=new AbmInscripcionitem();
             if($objAbmInscripcionitem->alta($datos)){
-                header('Location: ../../principal/principal.php');
+                header('Location: ../../principal/inicio.php');
             }else{
                 echo 'error';
             }

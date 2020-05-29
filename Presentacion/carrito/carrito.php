@@ -105,7 +105,7 @@ include_once '../estructura/encabezado.php';
 
     <hr>
 
-    <a class="btn btn-info" href="../principal/principal.php">Seguir inscripcionndo</a>
+    <a class="btn btn-info" href="../principal/inicio.php">Seguir inscripcionndo</a>
     <?php
      if($coleccioninscripcion!=null){
          ?>

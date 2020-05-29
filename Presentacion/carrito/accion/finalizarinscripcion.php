@@ -6,5 +6,5 @@ $resp = false;
 if($carrito->terminarinscripcion()){
     $resp = true;
 }
-header('Location: ../../principal/principal.php')
+header('Location: ../../principal/inicio.php')
 ?>
