@@ -9,9 +9,6 @@ $carrito=new Carrito();
 $coleccioninscripcion=$carrito->obtenerArregloIteminscripcion();
 
 $totalinscripcion=$carrito->totalinscripcion();
-
-
-
 ?>
 
 
@@ -74,8 +71,6 @@ include_once '../estructura/encabezado.php';
                <?php
                if($coleccioninscripcion!=null){
                    foreach($coleccioninscripcion as $inscripcion){
-
-
 
                        ?>
                        <tr>

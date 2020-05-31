@@ -42,7 +42,7 @@ class Cliente extends Carrito
 
     }
 
-    public function cancelarinscripcion($idinscripcion){
+    public function cancelarinsagregacripcion($idinscripcion){
         
         $estado=false;
         if($this->cambiarEstadoinscripcion($idinscripcion,4)){

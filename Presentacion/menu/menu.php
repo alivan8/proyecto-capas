@@ -127,7 +127,7 @@ include_once '../estructura/encabezado.php';
                         if (r){
                             $.post('accion/eliminarmenu.php?idmenu='+row.idmenu,{idmenu:row.id},
                                function(result){
-                               	 if (result.success){
+                               	 if (result.respuesta){
                                    	 
                                     $('#dg').datagrid('reload');    // reload the user data
                                 } else {

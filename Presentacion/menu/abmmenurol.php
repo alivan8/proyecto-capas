@@ -53,7 +53,7 @@ include_once '../estructura/encabezado.php';
         <th field="idmenu" width="10">ID</th>
         <th field="menombre" width="50">Nombre</th>
         <th field="medescripcion" width="50">Descripci&oacute;n</th>
-        <th field="idrol" width="10">ID</th>href="../usuarios/abmrol.php
+        <th field="idrol" width="10">ID</th>
         <th field="rodescripcion" width="50">Rol</th>
     </tr>
     </thead>

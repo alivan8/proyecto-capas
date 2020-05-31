@@ -52,8 +52,6 @@ class Carrito{
         $validar=$sesion->validar();
         if($validar==false){
             header('Location: ../Presentacion/principal/login.php');
-
-
         }
         $objUsuario=$sesion->getUsuario();
 
@@ -62,6 +60,7 @@ class Carrito{
         return $idUsuarioLogueado;
 
     }
+
     private function buscaUltimainscripcionUsuario(){
         $objinscripcion=null;
 
@@ -83,51 +82,31 @@ class Carrito{
 
             if($estado==true){
                 return $objinscripcion;
-
-
             }
             else{
                 $objinscripcion=null;
             }
-
-
-
         }
-
-
         return $objinscripcion;
-
-
     }
 
     public function objetoUltimainscripcionUsuario(){
-
         $objinscripcion=null;
-
         $idUsuarioLogueado=$this->buscaUsuario();
-
         $inscripcion=new AbmInscripcion();
         $inscripcionsdelUsuario=$inscripcion->buscar(['idusuario'=>$idUsuarioLogueado]);
         $totalinscripcions=count($inscripcionsdelUsuario);
-
         if(count($inscripcionsdelUsuario)>=1){
-
             //obtener la ultima inscripcion
             $totalinscripcions=count($inscripcionsdelUsuario);
-
             $indice=$totalinscripcions-1;
             $objinscripcion=$inscripcionsdelUsuario[$indice];
-            
-        
-
-
 
         }
-
-
         return $objinscripcion;
-
     }
+
+
     public function buscaEstadoinscripcion($objinscripcion){
         $estado=false;
 
@@ -179,47 +158,7 @@ class Carrito{
 
     }
 
-    public function agregarevento($param){
-        $param['importe']=$param['precio']*$param['cantidad'];
 
-
-        $evento=new AbmEvento();
-        $objevento=$evento->cargarObjetoConClave($param);
-        $arregloevento=$evento->buscar($param);
-        $evento=$arregloevento[0];
-
-
-
-        if($this->verificainscripcion()){
-
-            //verEstructura($evento);
-            //echo '<hr>';
-            //print_r($param);
-
-
-            $objetoUltimainscripcion=$this->buscaUltimainscripcionUsuario();
-            $idUltimainscripcion=$objetoUltimainscripcion->getidinscripcion();
-            //print_r($idUltimainscripcion);
-
-            $datos=['idinscripcion'=>$idUltimainscripcion,'idevento'=>$param['idevento'],'cicantidad'=>$param['cantidad'],'importe'=>$param['importe']];
-            $cantidadPedida= $datos['cicantidad'];
-            
-            
-            $this->actualizarEntrada($evento,$cantidadPedida,'restar');
-            $objAbmInscripcionitem=new AbmInscripcionitem();
-            if($objAbmInscripcionitem->alta($datos)){
-                header('Location: ../../principal/inicio.php');
-            }else{
-                echo 'error';
-            }
-
-
-        }else{
-            $this->crearinscripcion();
-            $this->agregarevento($param);
-        }
-
-    }
     public function obtenerArregloIteminscripcion(){
         $coleccioninscripcion=null;
 
@@ -243,7 +182,6 @@ class Carrito{
 
     }
 
-
     private function nuevoEstado($nuevoEstado,$idinscripcion){
         $estado=false;
         if($idinscripcion==null){
@@ -265,9 +203,6 @@ class Carrito{
         return $estado;
 
     }
-
-
-
 
     public function cambiarHoraEstadoAnterior($idinscripcion){
         $modificado=false;
@@ -293,10 +228,6 @@ class Carrito{
         return $modificado;
     }
 
-
-
-
-
     protected function  cambiarEstadoinscripcion($idinscripcion,$nuevoEstado){
 
 
@@ -312,6 +243,38 @@ class Carrito{
         return $cambiado;
     }
 
+    public function agregarevento($param){
+        $param['importe']=$param['precio']*$param['cantidad'];
+
+
+        $evento=new AbmEvento();
+        $objevento=$evento->cargarObjetoConClave($param);
+        $arregloevento=$evento->buscar($param);
+        $evento=$arregloevento[0];
+        if($this->verificainscripcion()){
+            //verEstructura($evento);
+            //echo '<hr>';
+            //print_r($param);
+            $objetoUltimainscripcion=$this->buscaUltimainscripcionUsuario();
+            $idUltimainscripcion=$objetoUltimainscripcion->getidinscripcion();
+            //print_r($idUltimainscripcion);
+
+            $datos=['idinscripcion'=>$idUltimainscripcion,'idevento'=>$param['idevento'],'cicantidad'=>$param['cantidad'],'importe'=>$param['importe']];
+            $cantidadPedida= $datos['cicantidad'];
+
+
+            $this->actualizarEntrada($evento,$cantidadPedida,'restar');
+            $objAbmInscripcionitem=new AbmInscripcionitem();
+            if($objAbmInscripcionitem->alta($datos)){
+                header('Location: ../../principal/inicio.php');
+            }else{
+                echo 'error';
+            }
+        }else{
+            $this->crearinscripcion();
+            $this->agregarevento($param);
+        }
+    }
 
     public function terminarinscripcion(){
         $ultimainscripcionUsuario=$this->buscaUltimainscripcionUsuario();
@@ -327,8 +290,6 @@ class Carrito{
 
 
     }
-
-
 
     public function quitarevento($param){
         $idinscripcionitem=$param['idinscripcionitem'];
@@ -368,7 +329,6 @@ class Carrito{
 
     }
 
- 
     public function totalinscripcion(){
         $total=0;
         $arregloITems=$this->obtenerArregloIteminscripcion();
