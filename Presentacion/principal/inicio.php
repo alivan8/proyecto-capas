@@ -71,7 +71,7 @@ include_once '../estructura/encabezado.php';
 
 <!--SE DIUJAN TODOS LOS eventoS-->
 <div class="container mt-3">
-    f<div class="row">
+    <div class="row">
 
     <?php
      foreach ($eventos as $evento){
@@ -79,7 +79,13 @@ include_once '../estructura/encabezado.php';
              ?>
         <div class="card-deck">
             <div class="card mb-4" style="min-width: 18rem; max-width: 18rem;">
-                <img class="card-img-top" src="<?php echo  ($imagen= $evento->getimagen()) ? $evento->getimagen(): 'https://placehold.it/280x140/abc'?>?>" alt="Card image cap">
+                <?php
+                // echo $evento->getimagen();
+                $final = '../../../..'.$evento->getimagen();
+
+                //../../../../Arquitectura/proyecto-MVC/Imagenes/77.png
+                ?>
+                <img class="card-img-top" src="<?php echo $final?>" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $evento->getnombre();?></h5>
                     <p class="card-text"><?php echo $evento->getdetalle();?></p>
