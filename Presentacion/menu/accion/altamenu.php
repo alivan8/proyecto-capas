@@ -9,10 +9,11 @@ if (isset($data['menombre'])){
             $mensaje = " La accion  ALTA No pudo concretarse";
         }
 }
-
+$salida['respuesta'] = $respuesta;
 if (isset($mensaje)){
     
     $respuesta['errorMsg']=$mensaje;
     echo json_encode($respuesta);
 }
+echo json_encode($salida);
 ?>

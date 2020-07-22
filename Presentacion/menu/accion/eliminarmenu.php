@@ -9,9 +9,11 @@ if (isset($data['idmenu'])){
         $mensaje = " La accion  ELIMINACION No pudo concretarse";
     }
 }
+$salida['respuesta'] = $respuesta;
 if (isset($mensaje)){
    
     $respuesta['errorMsg']=$mensaje;
     echo json_encode($respuesta);
 }
+echo json_encode($salida);
 ?>
