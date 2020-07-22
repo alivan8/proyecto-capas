@@ -6,7 +6,7 @@
  * Time: 11:36
  */
 
-class Admin extends  Carrito
+class Admin extends  Conferencias
 {
     public function verificaEstadoinscripcion($idinscripcion)
     {
@@ -42,7 +42,7 @@ class Admin extends  Carrito
     public function aceptarinscripcion($idinscripcion)
     {
         $estado = false;
-        //aca usamos la funcion para cambiarestado implementada en la clase Carrito
+        //aca usamos la funcion para cambiarestado implementada en la clase Conferencias
         if ($this->cambiarEstadoinscripcion($idinscripcion, 2)) {
             $estado = true;
 

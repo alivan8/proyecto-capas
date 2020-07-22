@@ -6,7 +6,7 @@
  * Time: 15:35
  */
 
-class Cliente extends Carrito
+class Cliente extends Conferencias
 {
 
 

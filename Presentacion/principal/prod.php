@@ -18,7 +18,7 @@ if(!empty($_GET['idevento'])){
 
 
 
-<form method="get" action="../carrito/accion/agregareventocarro.php">
+<form method="get" action="../conferencias/accion/agregareventocarro.php">
     <input name="precio" id="precio" type="hidden" value="<?php echo $evento->getimporte();?>">
     <input name="idevento" id="idevento" type="hidden" value="<?php echo $id;?>">
     <p style="font-size: 20px"><strong><?php echo $evento->getnombre();?></strong></p>

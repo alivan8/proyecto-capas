@@ -1,9 +1,9 @@
 <?php
 
 include_once '../../../configuracion.php';
-$carrito=new Carrito();
+$conferencias=new Conferencias();
 $resp = false;
-if($carrito->terminarinscripcion()){
+if($conferencias->terminarinscripcion()){
     $resp = true;
 }
 header('Location: ../../principal/inicio.php')

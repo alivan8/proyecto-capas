@@ -1,7 +1,7 @@
 <?php
 
 
-class Carrito{
+class Conferencias{
 
 
     public function verificainscripcion(){
@@ -311,13 +311,13 @@ class Carrito{
                 
                 $AbmInscripcionitem=new AbmInscripcionitem();
                 if($AbmInscripcionitem->baja($param)){
-                    $totalItemsCarrito=count($this->obtenerArregloIteminscripcion());
+                    $totalItemsConferencias=count($this->obtenerArregloIteminscripcion());
                     //
-                    if($totalItemsCarrito==0){
+                    if($totalItemsConferencias==0){
                       $this->cambiarEstadoinscripcion($idinscripcion,4);
 
                     }
-                    header('Location: ../carrito.php');
+                    header('Location: ../conferencias.php');
 
                 }
 
@@ -344,8 +344,8 @@ class Carrito{
     }
 
     
-    //si el operador es restar(cuando se agrega un evento al carrito) , se resta lo pedido al entrada
-    //si el operador es sumar(cuando se quita un evento del carrito) , se suma lo pedido al entrada
+    //si el operador es restar(cuando se agrega un evento al conferencias) , se resta lo pedido al entrada
+    //si el operador es sumar(cuando se quita un evento del conferencias) , se suma lo pedido al entrada
 
     public function actualizarEntrada($objevento,$cantidadPedida,$operador){
         $actualizado=false;

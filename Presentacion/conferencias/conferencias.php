@@ -4,11 +4,11 @@ include_once "../../configuracion.php";
 $menu=new AbmMenu();
 $arregloMenu=$menu->buscar(null);
 
-$carrito=new Carrito();
+$conferencias=new Conferencias();
 
-$coleccioninscripcion=$carrito->obtenerArregloIteminscripcion();
+$coleccioninscripcion=$conferencias->obtenerArregloIteminscripcion();
 
-$totalinscripcion=$carrito->totalinscripcion();
+$totalinscripcion=$conferencias->totalinscripcion();
 ?>
 
 
@@ -43,11 +43,11 @@ include_once '../estructura/encabezado.php';
 
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
 
-    <h3>Carrito de inscripcions</h3>
+    <h3>Conferencias de inscripcions</h3>
     <?php
       //if($coleccioninscripcion!=null){
         //  ?>
-         <!--  <a class="btn btn-danger btn-sm" style="color: white " href="accion/vaciarcarrito.php">Vaciar Carrito</a> -->
+         <!--  <a class="btn btn-danger btn-sm" style="color: white " href="accion/vaciarconferencias.php">Vaciar Conferencias</a> -->
     <?php
 
       //}
